@@ -1,0 +1,114 @@
+.product-page__statement {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+  color: var(--dark-900);
+  margin-top: 1.5rem;
+}
+
+.product-page__statement-accent {
+  color: var(--orange-500);
+}
+
+.product-page__features {
+  list-style: none;
+}
+
+.product-page__features li {
+  position: relative;
+  padding: 0.875rem 0 0.875rem 1.25rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--gray-800);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.product-page__features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1.25rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--orange-500);
+}
+
+.product-page__features li:last-child {
+  border-bottom: none;
+}
+
+.product-page__cta {
+  margin-top: 2.5rem;
+  padding: 2rem;
+  background: var(--gray-100);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.product-page__cta p {
+  font-size: 1rem;
+  color: var(--gray-600);
+  margin-bottom: 0.5rem;
+}
+
+.product-page__cta p:last-of-type {
+  margin-bottom: 1.25rem;
+}
+
+.product-page__cta-title {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  color: var(--dark-900);
+  margin-bottom: 0.875rem;
+}
+
+.product-page__cta-strong {
+  font-weight: 700;
+  color: var(--gray-800);
+}
+
+.product-page__cta-accent {
+  color: var(--orange-500);
+  font-weight: 700;
+}
+
+.product-page__cta-brand {
+  font-family: var(--font-en);
+}
+
+.product-page__cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.product-page__cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--orange-500);
+  border-radius: 4px;
+  transition: background var(--transition);
+}
+
+.product-page__cta-btn:hover {
+  background: var(--orange-600);
+}
+
+.product-page__cta-btn--secondary {
+  color: var(--orange-500);
+  background: var(--white);
+  border: 1px solid var(--orange-500);
+}
+
+.product-page__cta-btn--secondary:hover {
+  color: var(--white);
+  background: var(--orange-500);
+}

@@ -1,0 +1,103 @@
+.products-hero {
+  margin-top: var(--header-height);
+  background: #000;
+  color: var(--white);
+  text-align: center;
+  overflow: hidden;
+}
+
+.products-hero__content {
+  padding: clamp(4rem, 10vw, 6rem) 0 clamp(2rem, 5vw, 3rem);
+  max-width: 900px;
+}
+
+.products-hero__title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  color: var(--white);
+}
+
+.products-hero__accent {
+  background: linear-gradient(135deg, var(--orange-400), var(--orange-500));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.products-hero__desc .products-hero__accent {
+  font-weight: 600;
+}
+
+.products-hero__desc {
+  font-size: clamp(1.0625rem, 2.2vw, 1.375rem);
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 2rem;
+  letter-spacing: -0.01em;
+}
+
+.products-hero__br {
+  display: none;
+}
+
+.products-hero__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: var(--orange-400);
+  border-radius: 100px;
+  transition:
+    color var(--transition),
+    background var(--transition),
+    transform var(--transition);
+}
+
+.products-hero__cta:hover {
+  color: var(--white);
+  background: rgba(240, 90, 34, 0.2);
+  transform: scale(1.02);
+}
+
+.products-hero__visual {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem clamp(3rem, 6vw, 5rem);
+}
+
+.products-hero__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+  .products-hero__br {
+    display: inline;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-hero__content {
+    padding-top: 3rem;
+  }
+
+  .products-hero__visual {
+    padding-inline: 0;
+  }
+
+  .products-hero__image {
+    border-radius: 0;
+  }
+}

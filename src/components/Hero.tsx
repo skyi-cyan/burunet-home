@@ -48,9 +48,9 @@ export default function Hero() {
             <Link to="/company/overview" className="hero__btn hero__btn--primary">
               회사소개
             </Link>
-            <a href="#products" className="hero__btn hero__btn--outline">
+            <Link to="/products" className="hero__btn hero__btn--outline">
               제품·솔루션
-            </a>
+            </Link>
           </div>
         </div>
       </div>

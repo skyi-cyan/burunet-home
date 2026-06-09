@@ -1,0 +1,68 @@
+.manxai-story__section-title {
+  font-size: clamp(1.375rem, 3vw, 1.75rem);
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.manxai-story__title-accent {
+  color: var(--orange-500);
+}
+
+.manxai-story {
+  padding: clamp(2rem, 4vw, 2.75rem);
+  background: #2b2b2b;
+  border-radius: 12px;
+  color: var(--white);
+}
+
+.manxai-story__accent {
+  color: var(--orange-400);
+  font-weight: 700;
+}
+
+.manxai-story__pain-list {
+  list-style: none;
+  margin-bottom: 2rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.manxai-story__pain-list li {
+  font-size: clamp(1.0625rem, 2vw, 1.1875rem);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.88);
+  padding: 0.25rem 0;
+}
+
+.manxai-story__highlight {
+  color: var(--orange-400);
+  font-weight: 600;
+}
+
+.manxai-story__desc {
+  font-size: clamp(1rem, 1.8vw, 1.0625rem);
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 1rem;
+}
+
+.manxai-story__solution {
+  font-size: clamp(1.0625rem, 2vw, 1.125rem);
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 500;
+}
+
+.manxai-story__brand {
+  font-family: var(--font-en);
+  font-weight: 700;
+  color: var(--orange-400);
+}
+
+@media (max-width: 768px) {
+  .manxai-story {
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+}

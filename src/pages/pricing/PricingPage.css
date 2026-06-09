@@ -1,0 +1,22 @@
+.pricing-page__accent {
+  color: var(--orange-500);
+}
+
+.pricing-page__sub {
+  font-size: 0.85em;
+  font-weight: 500;
+  color: var(--gray-600);
+}
+
+.pricing-page__desc {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--gray-600);
+  margin-bottom: 2rem;
+}
+
+.pricing-page__plans {
+  padding: clamp(1.5rem, 3vw, 2rem);
+  background: linear-gradient(180deg, #0f1419 0%, #0a0a0a 100%);
+  border-radius: 12px;
+}

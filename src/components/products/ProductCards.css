@@ -1,0 +1,199 @@
+.product-cards {
+  background: #000;
+  color: var(--white);
+  padding: clamp(3rem, 6vw, 5rem) 0 clamp(4rem, 8vw, 6rem);
+}
+
+.product-cards__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.product-cards__card {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(2rem, 4vw, 2.75rem);
+  background: #000;
+  transition: background var(--transition);
+}
+
+.product-cards__card:hover {
+  background: var(--dark-900);
+}
+
+.product-cards__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  margin-bottom: 1.75rem;
+}
+
+.product-cards__orb {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 35% 35%,
+    rgba(251, 146, 60, 0.9) 0%,
+    rgba(240, 90, 34, 0.45) 45%,
+    rgba(240, 90, 34, 0.08) 70%,
+    transparent 100%
+  );
+  box-shadow:
+    0 0 40px rgba(240, 90, 34, 0.25),
+    inset 0 0 20px rgba(255, 255, 255, 0.08);
+}
+
+.product-cards__orb--infraai {
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(251, 146, 60, 0.35) 0%,
+    rgba(240, 90, 34, 0.15) 50%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+  box-shadow:
+    0 0 48px rgba(240, 90, 34, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.product-cards__orb--manxai {
+  border-radius: 50%;
+}
+
+.product-cards__orb--health-sports {
+  border-radius: 50% 50% 50% 12%;
+  transform: rotate(-12deg);
+}
+
+.product-cards__orb--custom-ai {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  transform: rotate(45deg);
+  background: linear-gradient(
+    135deg,
+    rgba(251, 146, 60, 0.5) 0%,
+    rgba(240, 90, 34, 0.2) 55%,
+    rgba(255, 255, 255, 0.06) 100%
+  );
+  box-shadow:
+    0 0 44px rgba(240, 90, 34, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.product-cards__orb--custom-ai::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  background: rgba(251, 146, 60, 0.35);
+  box-shadow: 0 0 20px rgba(240, 90, 34, 0.3);
+}
+
+@media (min-width: 1200px) {
+  .product-cards__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.product-cards__name {
+  font-family: var(--font-en);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(135deg, var(--orange-400), var(--orange-500));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.product-cards__tagline {
+  font-size: clamp(1rem, 1.8vw, 1.125rem);
+  font-weight: 500;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.product-cards__accent {
+  background: linear-gradient(135deg, var(--orange-400), var(--orange-500));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+.product-cards__desc {
+  flex: 1;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.58);
+  margin-bottom: 1.75rem;
+}
+
+.product-cards__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--orange-400);
+  transition:
+    color var(--transition),
+    gap var(--transition);
+}
+
+.product-cards__link:hover {
+  color: var(--white);
+  gap: 0.5rem;
+}
+
+.product-cards__link svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .product-cards__grid {
+    grid-template-columns: 1fr;
+    border-radius: 12px;
+  }
+
+  .product-cards__card + .product-cards__card {
+    border-top: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-cards {
+    padding-top: 2.5rem;
+  }
+
+  .product-cards__grid {
+    border-radius: 0;
+    border-inline: none;
+  }
+
+  .product-cards__card {
+    padding-inline: 1.25rem;
+  }
+
+  .product-cards__visual {
+    height: 96px;
+    margin-bottom: 1.25rem;
+  }
+}
