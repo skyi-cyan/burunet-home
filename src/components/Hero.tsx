@@ -2,10 +2,16 @@ import { Link } from 'react-router-dom'
 import './Hero.css'
 
 const highlights = [
-  'AI 기반 SaaS 소프트웨어',
-  'IT 인프라 관리 솔루션',
-  'Manxai(만사) HRM',
-  '건강·스포츠 앱',
+  'AI SaaS Platform',
+  'InfraAI',
+  'Manxai Workplace AI',
+  'Health AI Platform',
+]
+
+const stats = [
+  { value: '3+', label: 'AI Platform' },
+  { value: '100%', label: 'Cloud Native' },
+  { value: '24/7', label: 'Technical Support' },
 ]
 
 export default function Hero() {
@@ -28,16 +34,14 @@ export default function Hero() {
       <div className="hero__inner container">
         <div className="hero__content">
           <p className="hero__tag-en">Burunet Corp.</p>
-          <p className="hero__tag-kr">(주)부루넷 · AI 소프트웨어 전문 기업</p>
+          <p className="hero__tag-kr">(주)부루넷 · AI SaaS Platform Company</p>
           <h1 className="hero__title">
-            AI 기술로 더 스마트한
-            <br />
-            <span>미래를 연결합니다</span>
+            <span className="hero__title-lead">IT 인프라 관리부터 스마트 워크플레이스까지</span>
+            <span className="hero__title-accent">일하는 방식을 바꾸는 AI</span>
           </h1>
           <p className="hero__desc">
-            (주)부루넷은 인공지능(AI) 기술을 기반으로 고객의 비즈니스 혁신을 지원하는
-            SaaS 기반 소프트웨어 전문 개발 기업입니다. AI, 클라우드, 데이터 분석 및
-            자동화 기술을 접목한 솔루션으로 기업의 디지털 전환을 함께합니다.
+          AI, 클라우드, 데이터 기술을 활용하여
+          기업의 운영 효율을 높이는 SaaS 플랫폼을 제공합니다.
           </p>
           <ul className="hero__highlights">
             {highlights.map((item) => (
@@ -45,13 +49,21 @@ export default function Hero() {
             ))}
           </ul>
           <div className="hero__actions">
-            <Link to="/company/overview" className="hero__btn hero__btn--primary">
-              회사소개
-            </Link>
-            <Link to="/products" className="hero__btn hero__btn--outline">
-              제품·솔루션
+            <Link to="/products" className="hero__btn hero__btn--primary">
+              제품 살펴보기
             </Link>
           </div>
+        </div>
+      </div>
+
+      <div className="hero__stats">
+        <div className="container hero__stats-inner">
+          {stats.map((item) => (
+            <div key={item.label} className="hero__stat">
+              <p className="hero__stat-value">{item.value}</p>
+              <p className="hero__stat-label">{item.label}</p>
+            </div>
+          ))}
         </div>
       </div>
 

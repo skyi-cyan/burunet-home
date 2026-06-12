@@ -1,7 +1,6 @@
 import Hero from '../components/Hero'
 import About from '../components/About'
 import Products from '../components/Products'
-import Business from '../components/Business'
 import Contact from '../components/Contact'
 
 export default function HomePage() {
@@ -10,7 +9,6 @@ export default function HomePage() {
       <Hero />
       <About />
       <Products />
-      <Business />
       <Contact />
     </>
   )
