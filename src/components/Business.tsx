@@ -1,13 +1,5 @@
+import { businessAreas } from '../data/businessAreas'
 import './Business.css'
-
-const areas = [
-  { name: 'AI·소프트웨어', icon: '🤖' },
-  { name: 'IT 인프라', icon: '🖥️' },
-  { name: '엔터프라이즈', icon: '🏢' },
-  { name: '헬스케어', icon: '💚' },
-  { name: '스포츠·피트니스', icon: '⚡' },
-  { name: '클라우드', icon: '☁️' },
-]
 
 export default function Business() {
   return (
@@ -22,15 +14,29 @@ export default function Business() {
           </p>
         </div>
 
-        <div className="business__grid">
-          {areas.map((area) => (
-            <div key={area.name} className="business__item">
-              <span className="business__icon" aria-hidden="true">
-                {area.icon}
-              </span>
-              <span className="business__name">{area.name}</span>
-            </div>
-          ))}
+        <div className="business__split">
+          <figure className="business__figure">
+            <img
+              src="/images/business-areas.png"
+              alt="AI SaaS, IT 인프라, HRM, 모바일 앱, 시스템 통합 사업분야를 나타내는 일러스트"
+              className="business__figure-image"
+              width={560}
+              height={640}
+            />
+          </figure>
+          <ul className="business__list">
+            {businessAreas.map((item) => (
+              <li key={item.title} className="business__item">
+                <p className="business__item-title">{item.title}</p>
+                <p className="business__item-desc">
+                  <span className="business__item-arrow" aria-hidden="true">
+                    →
+                  </span>
+                  {item.desc}
+                </p>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div className="business__cta">

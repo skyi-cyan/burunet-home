@@ -1,27 +1,5 @@
+import { businessAreas } from '../../data/businessAreas'
 import './CompanyPage.css'
-
-const businessAreas = [
-  {
-    title: 'AI 기반 소프트웨어 개발',
-    desc: '인공지능 기술을 활용하여 업무 자동화, 데이터 분석, 예측 서비스 및 의사결정 지원 솔루션을 개발합니다.',
-  },
-  {
-    title: 'IT 인프라 관리 AI 솔루션',
-    desc: '서버, 네트워크, 보안 장비 등 IT 인프라를 통합 관리하고 AI를 활용한 장애 예측 및 운영 효율화를 제공합니다.',
-  },
-  {
-    title: '인적자원관리 HRM 솔루션',
-    desc: '기업의 인사 및 조직 운영을 효율적으로 관리할 수 있는 HRM 플랫폼입니다.',
-  },
-  {
-    title: '건강관리 및 스포츠 플랫폼',
-    desc: '사용자의 건강 데이터를 분석하여 맞춤형 건강관리 서비스를 제공하고 스포츠 활동을 지원하는 모바일 서비스를 개발합니다.',
-  },
-  {
-    title: '맞춤형 시스템 구축',
-    desc: '고객의 비즈니스 환경에 최적화된 웹, 모바일, 클라우드 기반 시스템을 설계·구축합니다.',
-  },
-]
 
 export default function CompanyOverview() {
   return (
