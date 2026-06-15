@@ -1,7 +1,7 @@
 .product-cards {
   background: #000;
   color: var(--white);
-  padding: clamp(3rem, 6vw, 5rem) 0 clamp(4rem, 8vw, 6rem);
+  padding: clamp(0.5rem, 1.5vw, 1rem) 0 clamp(4rem, 8vw, 6rem);
 }
 
 .product-cards__grid {
@@ -15,8 +15,10 @@
 }
 
 .product-cards__card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 5;
+  align-content: start;
   padding: clamp(2rem, 4vw, 2.75rem);
   background: #000;
   transition: background var(--transition);
@@ -109,12 +111,13 @@
 }
 
 .product-cards__name {
+  align-self: start;
   font-family: var(--font-en);
   font-size: clamp(1.5rem, 2.5vw, 2rem);
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.15;
-  margin-bottom: 0.75rem;
+  margin: 0 0 0.75rem;
   background: linear-gradient(135deg, var(--orange-400), var(--orange-500));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -122,11 +125,12 @@
 }
 
 .product-cards__tagline {
+  align-self: start;
   font-size: clamp(1rem, 1.8vw, 1.125rem);
   font-weight: 500;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.92);
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
   letter-spacing: -0.01em;
 }
 
@@ -139,14 +143,15 @@
 }
 
 .product-cards__desc {
-  flex: 1;
+  align-self: start;
   font-size: 0.9375rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.58);
-  margin-bottom: 1.75rem;
+  margin: 0 0 1.75rem;
 }
 
 .product-cards__link {
+  align-self: start;
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
@@ -178,9 +183,24 @@
   }
 }
 
+/* Subgrid 미지원 브라우저: 텍스트 영역 최소 높이로 행 정렬 */
+@supports not (grid-template-rows: subgrid) {
+  .product-cards__name {
+    min-height: calc(2 * 1.15em);
+  }
+
+  .product-cards__tagline {
+    min-height: calc(2 * 1.5em);
+  }
+
+  .product-cards__desc {
+    min-height: calc(3 * 1.7em);
+  }
+}
+
 @media (max-width: 768px) {
   .product-cards {
-    padding-top: 2.5rem;
+    padding-top: 0.5rem;
   }
 
   .product-cards__grid {

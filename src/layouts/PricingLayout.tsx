@@ -4,8 +4,8 @@ import './PricingLayout.css'
 
 const pageTitles: Record<string, string> = {
   '/pricing/infraai': 'InfraAI',
-  '/pricing/manxai': 'Manxai',
-  '/pricing/health-sports': 'Health & Sports',
+  '/pricing/manxai': 'Manxai Workplace',
+  '/pricing/health-sports': 'Health AI Platform',
   '/pricing/custom-ai': 'Custom AI Solutions',
 }
 

@@ -127,7 +127,7 @@ export default function Header() {
               <ul>
                 <li>
                   <Link to={productsLandingPath} onClick={closeAll}>
-                    전체 제품
+                    제품 개요
                   </Link>
                 </li>
                 {productsNav.map((item) => (
@@ -221,7 +221,7 @@ export default function Header() {
                     <ul>
                       <li>
                         <Link to={productsLandingPath} onClick={closeAll}>
-                          전체 제품
+                          제품 개요
                         </Link>
                       </li>
                       {productsNav.map((item) => (

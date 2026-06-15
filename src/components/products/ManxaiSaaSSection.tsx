@@ -17,7 +17,7 @@ export default function ManxaiSaaSSection() {
 
       <div className="manxai-saas__content">
         <p className="manxai-saas__intro">
-          <span className="manxai-saas__brand">Manxai</span>는 클라우드 기반 SaaS 플랫폼으로 구축되어
+          <span className="manxai-saas__brand">Manxai Workplace</span>는 클라우드 기반 SaaS 플랫폼으로 구축되어
           안정적인 서비스와 지속적인 기능 업데이트를 제공합니다.
         </p>
 

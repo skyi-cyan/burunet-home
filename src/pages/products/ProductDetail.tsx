@@ -73,7 +73,7 @@ export default function ProductDetail() {
             <p>복잡한 업무 프로세스를 단순하게.</p>
             <p>관리 업무는 줄이고 생산성은 높이십시오.</p>
             <p className="product-page__cta-strong">
-              <span className="product-page__cta-accent product-page__cta-brand">Manxai</span>와 함께{' '}
+              <span className="product-page__cta-accent product-page__cta-brand">Manxai Workplace</span>와 함께{' '}
               <span className="product-page__cta-accent">더 스마트한 업무 환경</span>을 시작하세요.
             </p>
             <div className="product-page__cta-actions">

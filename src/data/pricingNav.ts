@@ -26,8 +26,8 @@ export const pricingLandingPath = '/pricing/infraai' as const
 
 export const pricingNav = [
   { label: 'InfraAI', path: '/pricing/infraai' },
-  { label: 'Manxai', path: '/pricing/manxai' },
-  { label: 'Health & Sports', path: '/pricing/health-sports' },
+  { label: 'Manxai Workplace', path: '/pricing/manxai' },
+  { label: 'Health AI Platform', path: '/pricing/health-sports' },
   { label: 'Custom AI Solutions', path: '/pricing/custom-ai' },
 ] as const
 
@@ -90,7 +90,7 @@ export const productPricingMap: Record<string, ProductPricing> = {
   },
   manxai: {
     slug: 'manxai',
-    name: 'Manxai',
+    name: 'Manxai Workplace',
     subtitle: '3가지 모델로 조직 규모와 요구사항에 최적화된 솔루션 제공',
     plans: [
       {

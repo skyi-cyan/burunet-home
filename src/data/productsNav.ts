@@ -2,8 +2,8 @@ export const productsLandingPath = '/products' as const
 
 export const productsNav = [
   { label: 'InfraAI', path: '/products/infraai' },
-  { label: 'Manxai', path: '/products/manxai' },
-  { label: 'Health & Sports', path: '/products/health-sports' },
+  { label: 'Manxai Workplace', path: '/products/manxai' },
+  { label: 'Health AI Platform', path: '/products/health-sports' },
   { label: 'Custom AI Solutions', path: '/products/custom-ai' },
 ] as const
 
@@ -38,17 +38,18 @@ export const productItems: ProductItem[] = [
       '운영 자동화 및 리포트',
     ],
     path: '/products/infraai',
+    demoUrl: 'https://demo.infraai.io',
   },
   {
     id: 'manxai',
     slug: 'manxai',
-    name: 'Manxai',
-    tagline: '사람을 위한 SaaS형 AI HRM',
+    name: 'Manxai Workplace',
+    tagline: 'AI Smart Workplace Platform',
     taglineAccent: 'AI HRM',
     description:
-      '인사관리, 근태, 급여, 코칭까지 AI가 더 효율적으로 관리합니다.',
+      '인사관리, 근태, 급여, 코칭까지 AI HR Assistant를 하나의 플랫폼으로 제공합니다.',
     detailDesc:
-      'Manxai는 인사·근태·평가·조직 분석을 하나의 SaaS 플랫폼에서 제공하는 AI HRM 솔루션입니다. 반복 업무는 자동화하고, HR 담당자는 더 전략적인 의사결정에 집중할 수 있습니다.',
+      'Manxai Workplace는 인사·근태·평가·조직 분석을 하나의 SaaS 플랫폼에서 제공하는 AI HRM 솔루션입니다. 반복 업무는 자동화하고, HR 담당자는 더 전략적인 의사결정에 집중할 수 있습니다.',
     features: [
       '인사·조직·근태 통합 관리',
       'AI 기반 평가 및 조직 분석',
@@ -61,7 +62,7 @@ export const productItems: ProductItem[] = [
   {
     id: 'health-sports',
     slug: 'health-sports',
-    name: 'Health & Sports',
+    name: 'Health AI Platform',
     tagline: '건강한 일상을 위한 AI 서비스',
     taglineAccent: '건강한 일상',
     description: '건강 데이터 분석과 맞춤형 운동 관리를 제공합니다.',

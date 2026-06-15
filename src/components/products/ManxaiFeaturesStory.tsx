@@ -26,7 +26,7 @@ export default function ManxaiFeaturesStory() {
       </p>
 
       <p className="manxai-story__solution">
-        <span className="manxai-story__brand">Manxai</span>는 기업 운영에 필요한 핵심 업무를{' '}
+        <span className="manxai-story__brand">Manxai Workplace</span>는 기업 운영에 필요한 핵심 업무를{' '}
         <span className="manxai-story__accent">하나의 플랫폼</span>으로 통합하여 업무 효율성과
         생산성을 높입니다.
       </p>

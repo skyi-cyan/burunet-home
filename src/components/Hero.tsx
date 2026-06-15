@@ -4,7 +4,7 @@ import './Hero.css'
 const highlights = [
   'AI SaaS Platform',
   'InfraAI',
-  'Manxai Workplace AI',
+  'Manxai Workplace',
   'Health AI Platform',
 ]
 

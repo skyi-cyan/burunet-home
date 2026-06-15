@@ -37,7 +37,7 @@ const products: {
     ),
   },
   {
-    name: 'Manxai Workplace AI',
+    name: 'Manxai Workplace',
     subtitle: 'AI Smart Workplace Platform',
     desc: '인사·근태·코칭·조직 분석을 하나의 SaaS 플랫폼으로 통합하고, 반복 업무는 자동화하여 HR 업무 효율을 높입니다.',
     path: '/products/manxai',

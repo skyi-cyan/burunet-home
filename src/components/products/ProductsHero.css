@@ -1,18 +1,65 @@
 .products-hero {
+  position: relative;
   margin-top: var(--header-height);
   background: #000;
   color: var(--white);
-  text-align: center;
   overflow: hidden;
+  isolation: isolate;
+}
+
+.products-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.products-hero__bg-glow {
+  position: absolute;
+  top: 50%;
+  right: -10%;
+  width: min(55vw, 640px);
+  height: min(55vw, 640px);
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(240, 90, 34, 0.18) 0%,
+    rgba(240, 90, 34, 0.06) 40%,
+    transparent 70%
+  );
+  filter: blur(40px);
+}
+
+.products-hero__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  min-height: auto;
+  padding-block: clamp(2.5rem, 5vw, 3.5rem) clamp(1.25rem, 2.5vw, 2rem);
 }
 
 .products-hero__content {
-  padding: clamp(4rem, 10vw, 6rem) 0 clamp(2rem, 5vw, 3rem);
-  max-width: 900px;
+  max-width: 520px;
+  text-align: left;
+}
+
+.products-hero__label {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  font-family: var(--font-en);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--orange-400);
 }
 
 .products-hero__title {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(2rem, 4.75vw, 3.5rem);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -27,16 +74,12 @@
   background-clip: text;
 }
 
-.products-hero__desc .products-hero__accent {
-  font-weight: 600;
-}
-
 .products-hero__desc {
-  font-size: clamp(1.0625rem, 2.2vw, 1.375rem);
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.65;
   color: rgba(255, 255, 255, 0.72);
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   letter-spacing: -0.01em;
 }
 
@@ -44,42 +87,31 @@
   display: none;
 }
 
-.products-hero__cta {
-  display: inline-flex;
+.products-hero__visual {
+  position: relative;
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.75rem;
-  font-size: 1.0625rem;
-  font-weight: 500;
-  color: var(--orange-400);
-  border-radius: 100px;
-  transition:
-    color var(--transition),
-    background var(--transition),
-    transform var(--transition);
-}
-
-.products-hero__cta:hover {
-  color: var(--white);
-  background: rgba(240, 90, 34, 0.2);
-  transform: scale(1.02);
-}
-
-.products-hero__visual {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem clamp(3rem, 6vw, 5rem);
+  min-height: 280px;
 }
 
 .products-hero__image {
   width: 100%;
+  max-width: 560px;
   height: auto;
   display: block;
-  border-radius: 12px;
-  object-fit: cover;
-  aspect-ratio: 16 / 9;
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+  object-fit: contain;
+  filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.45));
+  animation: productsHeroFloat 8s ease-in-out infinite alternate;
+}
+
+@keyframes productsHeroFloat {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
 
 @media (min-width: 768px) {
@@ -88,16 +120,53 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .products-hero__inner {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-block: 2.5rem 1.25rem;
+    text-align: center;
+  }
+
   .products-hero__content {
-    padding-top: 3rem;
+    max-width: none;
+    text-align: center;
   }
 
   .products-hero__visual {
-    padding-inline: 0;
+    order: -1;
+    min-height: 220px;
+    margin-bottom: 0.5rem;
   }
 
   .products-hero__image {
-    border-radius: 0;
+    max-width: 420px;
+    margin-inline: auto;
+  }
+
+  .products-hero__bg-glow {
+    top: 28%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 80vw;
+    height: 80vw;
+    max-width: 480px;
+    max-height: 480px;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-hero__visual {
+    min-height: 180px;
+  }
+
+  .products-hero__image {
+    max-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .products-hero__image {
+    animation: none;
   }
 }

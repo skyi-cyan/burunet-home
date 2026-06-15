@@ -1,5 +1,4 @@
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
-import InfraAIHero from '../components/products/InfraAIHero'
 import ProductCards from '../components/products/ProductCards'
 import ProductsHero from '../components/products/ProductsHero'
 import { productsLandingPath, productsNav } from '../data/productsNav'
@@ -7,7 +6,7 @@ import './ProductsLayout.css'
 
 const pageTitles: Record<string, string> = {
   '/products/infraai': 'InfraAI',
-  '/products/manxai': 'Manxai',
+  '/products/manxai': 'Manxai Workplace',
   '/products/health-sports': 'Health & Sports',
   '/products/custom-ai': 'Custom AI Solutions',
 }
@@ -17,14 +16,11 @@ export default function ProductsLayout() {
   const pageTitle = pageTitles[pathname] ?? '제품·솔루션'
   const isLanding =
     pathname === productsLandingPath || pathname === `${productsLandingPath}/`
-  const isInfraAI = pathname === '/products/infraai'
 
   return (
     <div className={`products-layout ${isLanding ? 'products-layout--landing' : ''}`}>
       {isLanding ? (
         <ProductsHero />
-      ) : isInfraAI ? (
-        <InfraAIHero />
       ) : (
         <section className="products-layout-hero" aria-labelledby="products-layout-hero-title">
           <div className="products-layout-hero__bg" aria-hidden="true">
@@ -47,9 +43,7 @@ export default function ProductsLayout() {
         </section>
       )}
 
-      {!isLanding && isInfraAI && <Outlet />}
-
-      {!isLanding && !isInfraAI && (
+      {!isLanding && (
         <div className="products-layout__body container">
           <aside className="products-layout__sidebar">
             <nav aria-label="제품·솔루션 하위 메뉴">
