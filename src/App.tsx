@@ -13,6 +13,8 @@ import CompanyLocation from './pages/company/CompanyLocation'
 import ProductsLanding from './pages/products/ProductsLanding'
 import ProductDetail from './pages/products/ProductDetail'
 import ProductPricingPage from './pages/pricing/ProductPricingPage'
+import PrivacyPolicyPage from './pages/legal/PrivacyPolicyPage'
+import PrivacyIndexPage from './pages/legal/PrivacyIndexPage'
 import './App.css'
 
 function App() {
@@ -39,6 +41,8 @@ function App() {
             <Route path="history" element={<CompanyHistory />} />
             <Route path="location" element={<CompanyLocation />} />
           </Route>
+          <Route path="/privacy" element={<PrivacyIndexPage />} />
+          <Route path="/privacy/:appSlug" element={<PrivacyPolicyPage />} />
         </Routes>
       </main>
       <Footer />

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Footer.css'
 
 export default function Footer() {
@@ -22,7 +23,7 @@ export default function Footer() {
               </span>
             </p>
             <p className="footer__legal">
-              <a href="#">개인정보처리방침</a>
+              <Link to="/privacy">개인정보처리방침</Link>
               <span className="footer__divider" aria-hidden="true">
                 |
               </span>
