@@ -171,7 +171,25 @@ export default function SogalfreePrivacyContent({ policy }: PrivacyPolicyContent
       </section>
 
       <section className="legal-page__section">
-        <h2>11. 문의처</h2>
+        <h2>11. 데이터 삭제 안내</h2>
+        <ul>
+          <li>
+            <strong>앱 이름:</strong> 소갈푸리
+          </li>
+          <li>
+            <strong>삭제 방법:</strong> 앱 내 [설정] &gt; [데이터 삭제] 메뉴를 통해 사용자가 직접 모든
+            데이터를 즉시 삭제할 수 있습니다.
+          </li>
+          <li>
+            <strong>기타 문의:</strong> 삭제에 어려움이 있을 경우 개발자 이메일(
+            <a href={`mailto:${policy.contactEmail}`}>{policy.contactEmail}</a>)로 요청해 주시면
+            확인 후 처리해 드립니다.
+          </li>
+        </ul>
+      </section>
+
+      <section className="legal-page__section">
+        <h2>12. 문의처</h2>
         <p>개인정보 처리와 관련한 문의:</p>
         <ul>
           <li>
