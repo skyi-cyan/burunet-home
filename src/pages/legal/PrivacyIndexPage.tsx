@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom'
-import { getAllPrivacyPolicies, getPrivacyPolicyPath } from '../../data/privacyPolicies'
+import {
+  getAllPrivacyPolicies,
+  getPrivacyPolicyPath,
+  staticPrivacyPolicies,
+} from '../../data/privacyPolicies'
 import './LegalPage.css'
 
 export default function PrivacyIndexPage() {
-  const policies = getAllPrivacyPolicies()
+  const reactPolicies = getAllPrivacyPolicies()
 
   return (
     <article className="legal-page legal-page--index container">
@@ -16,7 +20,7 @@ export default function PrivacyIndexPage() {
       </header>
 
       <ul className="legal-page__policy-list">
-        {policies.map((policy) => (
+        {reactPolicies.map((policy) => (
           <li key={policy.slug}>
             <Link to={getPrivacyPolicyPath(policy.slug)} className="legal-page__policy-card">
               <span className="legal-page__policy-name">{policy.appName}</span>
@@ -24,6 +28,16 @@ export default function PrivacyIndexPage() {
                 시행일 {policy.effectiveDate} · 최종 개정 {policy.revisedDate}
               </span>
             </Link>
+          </li>
+        ))}
+        {staticPrivacyPolicies.map((policy) => (
+          <li key={policy.slug}>
+            <a href={policy.htmlPath} className="legal-page__policy-card">
+              <span className="legal-page__policy-name">{policy.appName}</span>
+              <span className="legal-page__policy-meta">
+                시행일 {policy.effectiveDate} · 최종 개정 {policy.revisedDate}
+              </span>
+            </a>
           </li>
         ))}
       </ul>
