@@ -10,7 +10,7 @@ export type StaticPrivacyPolicy = {
 export const staticPrivacyPolicies: StaticPrivacyPolicy[] = [
   {
     slug: 'lavesco',
-    appName: '라베스코 (Lavesco)',
+    appName: '라베스코',
     effectiveDate: '2026년 7월 3일',
     revisedDate: '2026년 7월 3일',
     htmlPath: '/privacy/lavesco.html',

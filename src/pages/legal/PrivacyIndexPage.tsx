@@ -1,13 +1,9 @@
 import { Link } from 'react-router-dom'
-import {
-  getAllPrivacyPolicies,
-  getPrivacyPolicyPath,
-  staticPrivacyPolicies,
-} from '../../data/privacyPolicies'
+import { getPrivacyIndexItems } from '../../data/privacyPolicies'
 import './LegalPage.css'
 
 export default function PrivacyIndexPage() {
-  const reactPolicies = getAllPrivacyPolicies()
+  const policies = getPrivacyIndexItems()
 
   return (
     <article className="legal-page legal-page--index container">
@@ -20,24 +16,23 @@ export default function PrivacyIndexPage() {
       </header>
 
       <ul className="legal-page__policy-list">
-        {reactPolicies.map((policy) => (
+        {policies.map((policy) => (
           <li key={policy.slug}>
-            <Link to={getPrivacyPolicyPath(policy.slug)} className="legal-page__policy-card">
-              <span className="legal-page__policy-name">{policy.appName}</span>
-              <span className="legal-page__policy-meta">
-                시행일 {policy.effectiveDate} · 최종 개정 {policy.revisedDate}
-              </span>
-            </Link>
-          </li>
-        ))}
-        {staticPrivacyPolicies.map((policy) => (
-          <li key={policy.slug}>
-            <a href={policy.htmlPath} className="legal-page__policy-card">
-              <span className="legal-page__policy-name">{policy.appName}</span>
-              <span className="legal-page__policy-meta">
-                시행일 {policy.effectiveDate} · 최종 개정 {policy.revisedDate}
-              </span>
-            </a>
+            {policy.kind === 'react' ? (
+              <Link to={policy.path} className="legal-page__policy-card">
+                <span className="legal-page__policy-name">{policy.appName}</span>
+                <span className="legal-page__policy-meta">
+                  시행일 {policy.effectiveDate} · 최종 개정 {policy.revisedDate}
+                </span>
+              </Link>
+            ) : (
+              <a href={policy.path} className="legal-page__policy-card">
+                <span className="legal-page__policy-name">{policy.appName}</span>
+                <span className="legal-page__policy-meta">
+                  시행일 {policy.effectiveDate} · 최종 개정 {policy.revisedDate}
+                </span>
+              </a>
+            )}
           </li>
         ))}
       </ul>
