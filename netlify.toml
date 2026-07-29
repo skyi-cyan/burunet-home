@@ -3,9 +3,9 @@
   publish = "dist"
 
 [[redirects]]
-  from = "/privacy/lavesco"
-  to = "/privacy/lavesco.html"
-  status = 301
+  from = "/privacy/lavesco.html"
+  to = "/index.html"
+  status = 200
 
 [[redirects]]
   from = "/privacy/sogalfree.html"

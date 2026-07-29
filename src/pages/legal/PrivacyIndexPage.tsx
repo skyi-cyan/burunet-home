@@ -18,21 +18,12 @@ export default function PrivacyIndexPage() {
       <ul className="legal-page__policy-list">
         {policies.map((policy) => (
           <li key={policy.slug}>
-            {policy.kind === 'react' ? (
-              <Link to={policy.path} className="legal-page__policy-card">
-                <span className="legal-page__policy-name">{policy.appName}</span>
-                <span className="legal-page__policy-meta">
-                  시행일 {policy.effectiveDate} · 최종 개정 {policy.revisedDate}
-                </span>
-              </Link>
-            ) : (
-              <a href={policy.path} className="legal-page__policy-card">
-                <span className="legal-page__policy-name">{policy.appName}</span>
-                <span className="legal-page__policy-meta">
-                  시행일 {policy.effectiveDate} · 최종 개정 {policy.revisedDate}
-                </span>
-              </a>
-            )}
+            <Link to={policy.path} className="legal-page__policy-card">
+              <span className="legal-page__policy-name">{policy.appName}</span>
+              <span className="legal-page__policy-meta">
+                시행일 {policy.effectiveDate} · 최종 개정 {policy.revisedDate}
+              </span>
+            </Link>
           </li>
         ))}
       </ul>

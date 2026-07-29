@@ -157,7 +157,8 @@
   margin-bottom: 0;
 }
 
-.legal-page__section ul {
+.legal-page__section ul,
+.legal-page__section ol {
   margin: 0 0 0.875rem;
   padding-left: 1.25rem;
 }
